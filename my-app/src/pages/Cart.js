@@ -1,9 +1,24 @@
 import React from 'react'//rafce reacta arrow function component export
-
+import { useSelector } from 'react-redux'
 
 const Cart = () => {
+  const products = useSelector(state=> state.cart)
   return (
-    <div>Cart</div>
+    <div>
+       <h3>Cart</h3>
+       <div className='cartWrapper'>
+        {
+ products.map(product =>(
+<div className='cartCard'>
+  <img src='' alt=''/>
+
+</div>
+
+ ))
+        }
+
+       </div>
+    </div>
   )
 }
 
